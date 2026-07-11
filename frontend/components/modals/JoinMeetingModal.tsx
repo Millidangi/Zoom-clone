@@ -33,7 +33,6 @@ export default function JoinMeetingModal({
     localStorage.setItem("displayName", displayName);
 
     router.push(`/meeting/${meetingId}`);
-
     onClose();
   };
 
@@ -62,7 +61,7 @@ export default function JoinMeetingModal({
 
           <div>
 
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
               Display Name
             </label>
 
@@ -71,14 +70,14 @@ export default function JoinMeetingModal({
               placeholder="Mili Kumari"
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
-              className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
           </div>
 
           <div>
 
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
               Meeting ID
             </label>
 
@@ -87,7 +86,7 @@ export default function JoinMeetingModal({
               placeholder="e.g. a1b2c3d4"
               value={meetingId}
               onChange={(e) => setMeetingId(e.target.value)}
-              className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
           </div>
@@ -100,7 +99,7 @@ export default function JoinMeetingModal({
 
           <button
             onClick={onClose}
-            className="px-6 py-3 rounded-xl bg-gray-200 hover:bg-gray-300 font-medium transition"
+            className="px-6 py-3 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition"
           >
             Cancel
           </button>
