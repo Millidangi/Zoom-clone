@@ -82,13 +82,9 @@ export default function CreateMeetingModal({
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-
       <div className="bg-white w-[550px] rounded-3xl shadow-2xl overflow-hidden">
-
         {/* Header */}
-
         <div className="bg-[#0E72ED] px-8 py-6 text-white">
-
           <h2 className="text-3xl font-bold">
             {instantMeeting ? "New Meeting" : "Schedule Meeting"}
           </h2>
@@ -98,16 +94,12 @@ export default function CreateMeetingModal({
               ? "Create and start a meeting instantly."
               : "Plan your meeting for later."}
           </p>
-
         </div>
 
         {/* Form */}
-
         <div className="p-8 space-y-5">
-
           <div>
-
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
               Meeting Title
             </label>
 
@@ -116,14 +108,12 @@ export default function CreateMeetingModal({
               placeholder="Weekly Team Sync"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
             />
-
           </div>
 
           <div>
-
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
               Description
             </label>
 
@@ -132,14 +122,12 @@ export default function CreateMeetingModal({
               placeholder="Meeting Agenda..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full border rounded-xl p-3 resize-none focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 placeholder:text-gray-500 resize-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
             />
-
           </div>
 
           <div>
-
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
               Host Name
             </label>
 
@@ -148,16 +136,13 @@ export default function CreateMeetingModal({
               placeholder="Mili Kumari"
               value={hostName}
               onChange={(e) => setHostName(e.target.value)}
-              className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
             />
-
           </div>
 
           {!instantMeeting && (
-
             <div>
-
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-800 mb-2">
                 Date & Time
               </label>
 
@@ -165,16 +150,13 @@ export default function CreateMeetingModal({
                 type="datetime-local"
                 value={scheduledAt}
                 onChange={(e) => setScheduledAt(e.target.value)}
-                className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
               />
-
             </div>
-
           )}
 
           <div>
-
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
               Duration (Minutes)
             </label>
 
@@ -184,20 +166,16 @@ export default function CreateMeetingModal({
               max={240}
               value={duration}
               onChange={(e) => setDuration(Number(e.target.value))}
-              className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full rounded-xl border border-gray-300 bg-white p-3 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
             />
-
           </div>
-
         </div>
 
         {/* Footer */}
-
         <div className="flex justify-end gap-3 bg-gray-50 px-8 py-5">
-
           <button
             onClick={onClose}
-            className="px-6 py-3 rounded-xl bg-gray-200 hover:bg-gray-300 font-medium transition"
+            className="px-6 py-3 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition"
           >
             Cancel
           </button>
@@ -213,11 +191,8 @@ export default function CreateMeetingModal({
               ? "Start Meeting"
               : "Schedule Meeting"}
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 }
